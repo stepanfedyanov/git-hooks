@@ -18,7 +18,7 @@ branch = check_output(['git', 'symbolic-ref', '--short', 'HEAD']).decode('utf-8'
 print(f"{yellow_color} commit-msg: Проверяем имя коммита на ветке '{branch} {color_off}")
 
 issue_number_on_issue_branch = re.match('issue[-\/](\d+)', branch)
-issue_number_on_feature_branch = re.match('issue[-\/](\d+)', branch)
+issue_number_on_feature_branch = re.match('feature[-\/](\d+)', branch)
 
 issue_number = None
 
